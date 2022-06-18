@@ -1,0 +1,37 @@
+.content {
+  display: flex;
+  align-items: center;
+}
+
+.content > div {
+  width: 50%;
+}
+
+.title {
+  font-size: 4.5rem;
+  color: var(-theme-default-text);
+  /* font-family: 'Opensans';  */
+  font-family: 'Overpass';
+  margin-bottom: 1rem;
+}
+
+.accent {
+  color: var(--color-red);
+
+}
+
+.subtitle {
+  color: #c2c2c2;
+  line-height: 1.6;
+  margin-bottom: 1.8rem;
+  font-size: 1.2rem;
+}
+
+.image {
+  -webkit-mask-image: radial-gradient(ellipse 52% 78% at 50% 50%, black 32%, transparent 65%);
+  mask-image: radial-gradient(ellipse 52% 78% at 50% 50%, black 32%, transparent 65%);
+}
+
+.image img {
+  width: 100%;
+}

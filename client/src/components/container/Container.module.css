@@ -1,0 +1,16 @@
+.container {
+  width: var(--container-lg);
+  margin: auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: var(--container-md);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: var(--container-sm);
+  }
+}

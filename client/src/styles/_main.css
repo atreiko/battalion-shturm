@@ -1,0 +1,27 @@
+html {
+  font-size: 15px;
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--theme-default-text);
+  background-color: var(--theme-default-bg);
+}
+
+/* .layout {}  */
+
+header {
+  /* height: 15vh; */
+  /* border: 1px dotted #fff; */
+}
+
+footer {
+  /* height: 10vh; */
+}
+
+.page {
+  padding: 1rem 0;
+  /* border: 1px solid #f00; */
+  /* height: 75vh; */
+}
+

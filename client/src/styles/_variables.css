@@ -1,0 +1,21 @@
+:root {
+  --theme-dark-text: #fff;
+  --theme-light-text: #1a1a1a;
+  --theme-default-text: var(--theme-dark-text);
+
+  --theme-dark-bg: #1a1a1a;
+  --theme-light-bg: #fff;
+  --theme-default-bg: var(--theme-dark-bg);
+
+  --color-yellow: #fec325;
+  --color-red: #f00;
+
+  --font-primary: 'Montserrat', sans-serif;
+  --font-secondary: 'Overpass';
+
+  --border-radius: 3px;
+
+  --container-lg: 80%;
+  --container-md: 86%;
+  --container-sm: 91%;
+}

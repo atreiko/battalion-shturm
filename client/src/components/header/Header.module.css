@@ -1,0 +1,31 @@
+/* ! */
+.header {
+  width: 100%;
+  /* position: fixed;
+  top: 0;
+  z-index: 2; */
+}
+
+.header > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+}
+
+.list li {
+  margin-left: 2rem;
+  padding: 10px 0;
+  overflow: hidden;
+}
