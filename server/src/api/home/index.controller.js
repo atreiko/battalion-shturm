@@ -6,3 +6,4 @@ export const IndexController = (request, response) => {
       data: []
     })
 }
+

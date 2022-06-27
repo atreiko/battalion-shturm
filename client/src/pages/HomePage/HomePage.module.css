@@ -1,6 +1,7 @@
 .content {
   display: flex;
   align-items: center;
+  margin-bottom: 10rem;
 }
 
 .content > div {
@@ -17,7 +18,6 @@
 
 .accent {
   color: var(--color-red);
-
 }
 
 .subtitle {

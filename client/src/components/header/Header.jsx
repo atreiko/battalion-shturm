@@ -17,7 +17,7 @@ const Header = () => {
               <ThemeSwitcher />
             </li>
             <li>
-              <UiButton title='Вхід' />
+              <UiButton title='Вхід' path={`/signin`} />
             </li>
           </ul>
         </div>

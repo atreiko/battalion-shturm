@@ -9,7 +9,9 @@ if (!environment) {
 export default {
   VERSION: process.config.VERSION || 1,
 
-  PORT: process.env.PORT || 3001,
+  PORT: process.env.PORT || 3009,
 
-  MONGODB_URI: process.env.MONGO_DB_URI
+  MONGODB_URI: process.env.MONGO_DB_URI,
+
+  JWT_SECRET: process.env.JWT_SECRET
 }

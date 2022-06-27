@@ -1,0 +1,10 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+}
+
+.wrapper ul {
+  display: flex;
+  gap: .5rem;
+}

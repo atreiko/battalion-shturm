@@ -1,0 +1,26 @@
+{
+  "name": "battalion-shturm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "run-p start-server start-front",
+    "start-server": "npm start --prefix server",
+    "start-front": "npm start --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atreiko/battalion-shturm.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/atreiko/battalion-shturm/issues"
+  },
+  "homepage": "https://github.com/atreiko/battalion-shturm#readme",
+  "dependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}

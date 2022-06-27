@@ -1,32 +1,30 @@
 .wrapper {
-  overflow: hidden;
   padding: .7rem 0;
   display: inline-block;
+  overflow: hidden;
+  height: 100%;
 }
 
 .btn {
+  position: relative;
+  display: inline-block;
   padding: .5rem 1rem;
   border-radius: var(--border-radius);
-  background: none;
   border: 1px solid var(--theme-default-text);
+  background: none;
   color: var(--theme-default-text);
   cursor: pointer;
   transition: .8s;
-  position: relative;
   outline: none;
   overflow: hidden;
-
-  -webkit-touch-callout: none; 
-  -webkit-user-select: none;
-  -moz-user-select: none;
+  user-select: none;
 }
 
-
-.btn1 {
+.btnEffect {
   color: var(--theme-default-text);
 }
 
-.btn1:hover {
+.btnEffect:hover {
   color: var(--theme-default-bg);
 }
 
@@ -41,12 +39,21 @@
   transition: .8s;
 }
 
-.btn1::before {
+.btnEffect::before {
   top: 0;
   border-radius: 0 0 50% 50%;
 }
 
-.btn1:hover::before {
-  height: 180%;
+.btnEffect:hover::before {
+  height: 181%;
 }
 
+.btn:disabled {
+  color: grey;
+  opacity: .5;
+}
+
+/* ! */
+.btn .active {
+  color: var(--color-red);
+}

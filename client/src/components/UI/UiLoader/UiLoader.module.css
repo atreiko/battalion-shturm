@@ -1,0 +1,7 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 316%; /* !omg -_- */
+  height: 50vh;
+}

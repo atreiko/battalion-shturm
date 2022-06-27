@@ -4,5 +4,5 @@
   color: var(--color-yellow);
   text-shadow: 1px 1px 1px var(--theme-default-text);
   letter-spacing: 2px;
-  margin-bottom: 2rem;
+  user-select: none; 
 }

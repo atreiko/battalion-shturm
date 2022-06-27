@@ -8,14 +8,16 @@ const UiButton = ({
   onClick, 
   path='#',
   theme='dark', 
-  classes
+  classes,
+  disabled
 }) => {
   return (
     <div className={styles.wrapper}>
       <Link 
         to={path}
-        className={[styles.btn, styles.btn1, styles[theme], classes].join(' ')} 
+        className={[styles.btn, styles.btnEffect, styles[theme], classes].join(' ')} 
         onClick={onClick}
+        disabled={disabled}
       >
         {title}
       </Link>

@@ -9,8 +9,10 @@ export default class PostService {
 
   static async getSoldiersPosts() {
     const response = await axios.get('/api/v1/soldiers')
+    console.log(response);
     return response.data
   }
+
 
   static async getValorPosts() {
     const response = await axios.get('/api/v1/valors')
@@ -22,5 +24,6 @@ export default class PostService {
     return response.data
   }
 }
+
 
 

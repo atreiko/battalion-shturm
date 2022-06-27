@@ -31,9 +31,46 @@ export default ({config}) => {
 	}));
 
   app.use(bodyParser.json())
-  
+
+  // app.use((request, response, next) => {
+	// 	const err = new Error('Not Found');
+	// 	err['status'] = 404;
+
+	// 	next(err);
+	// });
+
   // load api routes
   app.use(`/api/v${config.VERSION}`, apiRoutes())
+
+  /// error handlers
+	app.use((
+		err,
+		request,
+		response, 
+    next
+	) => {
+		let statusCode = typeof err === 'object' && err.status > 0
+			? err.status
+			: 500
+
+		const {
+			status = statusCode,
+			name = '',
+			message: error = 'Internal Application Error'
+		} = err
+
+		const customResponse = response
+			.status(statusCode)
+      .json({
+        error,
+        code: statusCode
+      })
+			// .json(StatusService.buildError(error, statusCode));
+      
+		return name === 'UnauthorizedError'
+			? customResponse.end()
+			: customResponse;
+	})
 
   return app
 }

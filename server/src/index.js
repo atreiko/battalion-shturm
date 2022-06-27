@@ -13,7 +13,7 @@ import config from './config'
     }
     console.log(`
       ################################################
-     / Server listening on port: ${PORT} and "/api/v${config.VERSION}" /
+🟢   / Server listening on port: ${PORT} and "/api/v${config.VERSION}" / 
     ################################################
     `);
   })

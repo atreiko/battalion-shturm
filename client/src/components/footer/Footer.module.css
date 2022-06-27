@@ -1,38 +1,7 @@
 footer {
-  position: fixed;
-  bottom: 0;
-  background-color: var(--theme-default-text);
   width: 100%;
-  color: var(--theme-default-bg);
   padding: 2rem 0;
-  /* overflow: hidden; */
-}
-
-/* .inner::after,
-.inner::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  min-width: 300vw;
-  min-height: 300vw;
-  animation-name: rotate;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-
-.inner::before {
-  border-radius: 45%;
-  animation-duration: 10s;
-}
-
-.inner::after {
-  border-radius: 47%;
-  animation-duration: 10s;
+  margin-top: 50px;
   background-color: var(--theme-default-text);
+  color: var(--theme-default-bg);
 }
-
-@keyframes rotate {
-  0% {transform: translate(-50%, 0) rotateZ(0deg);}
-  50% {transform: translate(-50%, -2%) rotateZ(180deg);}
-  100% {transform: translate(-50%, 0%) rotateZ(360deg);}
-} */
