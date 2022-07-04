@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react'
-import { ThemeContext, THEME_DARK, THEME_LIGHT } from '../../context/ThemeProvider'
+import { ThemeContext, THEME_DARK, THEME_LIGHT } from '../../context/Theme/ThemeProvider'
 import ThemeIcon from './ThemeIcon'
 
 // import styles from './ThemeSwitcher.module.css'

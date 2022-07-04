@@ -1,5 +1,5 @@
 import React, { useState, createContext } from 'react'
-import { changeCssVariable } from '../services/changeCssVariable'
+import { changeCssVariable } from '../../services/changeCssVariable'
 
 export const THEME_DARK = 'dark';
 export const THEME_LIGHT = 'light';
