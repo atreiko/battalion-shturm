@@ -7,8 +7,8 @@ export default () => {
   const router = Router()
 
   HomeRoute(router)
-  SoldiersRoute(router)
   AuthRoute(router)
+  SoldiersRoute(router)
   
   return router
 }

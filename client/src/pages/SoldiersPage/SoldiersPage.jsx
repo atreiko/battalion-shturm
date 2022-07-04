@@ -9,7 +9,7 @@ const SoldiersPage = () => {
   const [cards, setCards] = useState([])
   const [fetchCards, cardsLoading, cardsError] = useFetching(async () => {
     const items = await PostService.getSoldiersPosts()
-    console.log(items);
+    // console.log(items);
     setCards(items.data)
   })
 

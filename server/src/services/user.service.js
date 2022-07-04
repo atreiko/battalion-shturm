@@ -19,7 +19,7 @@ function generateToken({id}) {
         soldiers: {
           create: true,
           update: true,
-          delete: false
+          delete: true
         }
       },
       exp: exp.getTime() / 1000
@@ -29,24 +29,52 @@ function generateToken({id}) {
 }
 
 /**
- * @desc creates user
+ * @desc Creates user
  */
 export const createUser = async ({
-  email,
-  first_name,
-  last_name,
+  login,
   password: pswdIn,
 }) => {
   const salt = randomBytes(32)
   const password = await argon2.hash(pswdIn, { salt })
 
   const user = await UserSchema.create({
-    email,
-    first_name,
-    last_name,
+    login,
     password,
     salt
   })
+
+  return {
+    user,
+    token: generateToken(user)
+  }
+}
+
+/**
+ * 
+ * @desc Sign in 
+ */
+export const userSignIn = async({
+  login, 
+  password
+}) => {
+  const user = await UserSchema.findOne({ login })
+
+  if (!user) {
+    throw new Error('User not found.')
+  }
+
+  const verification = await argon2.verify(
+    user.password,
+    password,
+    {
+      salt: user.salt
+    }
+  )
+
+  if (!verification) {
+    throw new Error('Invalid password.')
+  }
 
   return {
     user,

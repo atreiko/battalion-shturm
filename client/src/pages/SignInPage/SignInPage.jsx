@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Container, Form } from '../../components'
-import { UiInput } from '../../components/UI'
 
 import styles from './SignInPage.module.css'
 

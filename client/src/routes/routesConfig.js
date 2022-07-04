@@ -31,7 +31,7 @@ const routesConfig = [
   {
     id: 'signin-page',
     element: <SignInPage />,
-    path: 'signin',
+    path: 'auth/signin',
   },
   {
     id: 'not-found',

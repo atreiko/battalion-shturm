@@ -9,7 +9,6 @@ export default class PostService {
 
   static async getSoldiersPosts() {
     const response = await axios.get('/api/v1/soldiers')
-    console.log(response);
     return response.data
   }
 
