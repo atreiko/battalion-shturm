@@ -6,8 +6,8 @@ import styles from './UiInput.module.css'
 const UiInput = ({ name, type = 'text', ...rest }) => {
 
   const [field, meta, helpers] = useField(name);
-  // console.log('meta -->', meta);
-  // console.log('field -->', field);
+  console.log('meta -->', meta);
+  console.log('field -->', field);
 
   return (
     <div className={styles.wrapper}>
@@ -15,10 +15,10 @@ const UiInput = ({ name, type = 'text', ...rest }) => {
         name={name}
         type={type} 
         autoComplete='off'
-        {...field}
-        {...rest}
+        // {...field}
+        // {...rest}
       />
-      { meta.error && meta.touched && <span className='error'>{meta.error}</span> }
+      {/* { meta.error && meta.touched && <span className='error'>{meta.error}</span> } */}
     </div>
   )
 }

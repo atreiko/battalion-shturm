@@ -4,16 +4,15 @@ import { UiInput } from '../UI'
 import { withFormik } from 'formik';
 import schema from './schema';
 import axios from 'axios'
-// import UserService from '../../api/UserService';
+import UserService from '../../services/api/UserService';
+import useAuth from '../../hooks/useAuth';
 
 import styles from './Form.module.css'
 
 const Form = ({ handleSubmit, handleChange, isAuth }) => {
+  const [isLoading, setIsLoading] = useState(false)
+  const auth = useAuth()
   const navigate = useNavigate()
-
-  useEffect(() => {
-    
-  })
 
   if (isAuth) {
     navigate('/')
@@ -34,18 +33,8 @@ const Form = ({ handleSubmit, handleChange, isAuth }) => {
 const signIn = async (values, props) => {
   // values: {login: 'artem', password: '1234'}
   try {
-    const { data } = await axios.post(
-      '/api/v1/auth/signin', 
-      JSON.stringify(values),
-      {
-        headers: { 'Content-Type': 'application/json' },
-        withCredentials: true
-      }
-    )
-    console.log(data);
-    // localStorage.setItem('user', JSON.stringify(data));
+    const { token, user } = await UserService.SignIn(values)
 
-    //! setSubmitting(false); If onSubmit is async, then Formik will automatically set isSubmitting to false
   } catch (error) {
     console.log(error.response.data);
   }

@@ -12,6 +12,7 @@ const App = () => {
 
         {
           routesConfig.map(({id, element, path, index}) => (
+            
             <Route 
               index={index} 
               element={element} 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import PostService from '../../api/PostService'
+import PostService from '../../services/api/PostService'
 import { Container, Title } from '../../components'
 import Cards from '../../components/cards/Cards'
 import Pagination from '../../components/pagination/Pagination'
@@ -9,7 +9,6 @@ const SoldiersPage = () => {
   const [cards, setCards] = useState([])
   const [fetchCards, cardsLoading, cardsError] = useFetching(async () => {
     const items = await PostService.getSoldiersPosts()
-    // console.log(items);
     setCards(items.data)
   })
 

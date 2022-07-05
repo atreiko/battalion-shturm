@@ -27,7 +27,6 @@ export const SignUpController = async (request, response, next) => {
 
 export const SignInController = async (request, response, next) => {
   const req = request
-  console.log('>>>---REQUEST--->', req);
 
   try {
     const { 
