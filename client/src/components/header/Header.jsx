@@ -1,12 +1,23 @@
-import React from 'react'
+import React, { useState, useContext } from 'react'
 import Logo from '../../assets/logo/Logo'
 import ThemeSwitcher from '../../assets/theme-switcher/ThemeSwitcher'
 import { Nav, Container } from '../../components'
-import { UiButton } from '../UI'
+import { UiButton, UiButtonLink } from '../UI'
+import AuthProvider from '../../context/Auth/AuthProvider'
 
 import styles from './Header.module.css'
+import { AuthContext } from '../../context/Auth/AuthContext'
+import Exit from '../../assets/exit/Exit'
 
 const Header = () => {
+  const auth = useContext(AuthContext)
+  const isAuthrized = !!auth.user
+
+  const signOut = () => {
+    auth.setUser(null)
+    auth.setTokenData(null)
+  }
+
   return (
     <header className={styles.header}>
       <Container>
@@ -17,7 +28,10 @@ const Header = () => {
               <ThemeSwitcher />
             </li>
             <li>
-              <UiButton title='Вхід' path={`auth/signin`} />
+              { !isAuthrized 
+                ? <UiButtonLink title='Вхід' path='auth/signin' /> 
+                : <Exit onClick={signOut} />
+              }
             </li>
           </ul>
         </div>

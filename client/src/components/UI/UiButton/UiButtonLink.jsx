@@ -13,19 +13,17 @@ const UiButton = ({
 }) => {
   return (
     <div className={styles.wrapper}>
-      <button 
-        type='submit'
+      <Link 
         to={path}
         className={[styles.btn, styles.btnEffect, styles[theme], classes].join(' ')} 
         onClick={onClick}
         disabled={disabled}
       >
         {title}
-      </button>
+      </Link>
     </div>
 
   )
 }
 
 export default UiButton
-

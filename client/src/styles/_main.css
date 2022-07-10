@@ -8,21 +8,14 @@ body {
   background-color: var(--theme-default-bg);
 }
 
-/* .layout {}  */
+.layout {} 
 
-header {
-  /* height: 15vh; */
-  /* border: 1px dotted #fff; */
-}
+header {}
 
-footer {
-  /* height: 10vh; */
-}
+footer {}
 
 .page {
   padding: 1rem 0;
-  /* border: 1px solid #f00; */
-  /* height: 75vh; */
 }
 
 .active {

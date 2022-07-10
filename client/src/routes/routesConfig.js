@@ -4,7 +4,6 @@ import {
   ValorsPage,
   PhotosPage, 
   NotFoundPage,
-  SignInPage
 } from '../pages';
 
 const routesConfig = [
@@ -28,11 +27,11 @@ const routesConfig = [
     element: <PhotosPage />,
     path: 'photos',
   },
-  {
-    id: 'signin-page',
-    element: <SignInPage />,
-    path: 'auth/signin',
-  },
+  // {
+  //   id: 'signin-page',
+  //   element: <SignInPage />,
+  //   path: 'auth/signin',
+  // },
   {
     id: 'not-found',
     path: '*',

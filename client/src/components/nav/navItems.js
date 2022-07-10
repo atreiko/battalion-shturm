@@ -26,6 +26,11 @@ const navItems = [
     path: '/videos',
     title: 'Відео'
   },
+  {
+    id: 'admin-link',
+    path: '/admin',
+    title: 'Адмін'
+  }
 ]
 
 export default navItems

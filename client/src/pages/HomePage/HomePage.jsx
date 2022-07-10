@@ -1,7 +1,6 @@
 import React from 'react'
 import { Container } from '../../components'
 import { UiButton } from '../../components/UI'
-
 import banner from '../../assets/smpu.jpeg'
 
 import styles from './HomePage.module.css'

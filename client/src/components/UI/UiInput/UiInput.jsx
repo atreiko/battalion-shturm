@@ -3,22 +3,16 @@ import { useField } from 'formik';
 
 import styles from './UiInput.module.css'
 
-const UiInput = ({ name, type = 'text', ...rest }) => {
-
-  const [field, meta, helpers] = useField(name);
-  console.log('meta -->', meta);
-  console.log('field -->', field);
-
+const UiInput = ({ field, form, ...rest }) => {
   return (
     <div className={styles.wrapper}>
       <input 
-        name={name}
-        type={type} 
-        autoComplete='off'
-        // {...field}
-        // {...rest}
+        autoComplete='off' 
+        {...field} 
+        {...rest} 
       />
-      {/* { meta.error && meta.touched && <span className='error'>{meta.error}</span> } */}
+      { form.errors[field.name] && form.touched[field.name] && <span>{form.errors[field.name]}</span> }
+      <label>{field.name}</label>
     </div>
   )
 }
