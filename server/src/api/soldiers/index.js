@@ -1,10 +1,12 @@
 import { Router } from 'express'
+
 import { 
   CreateSoldierController, 
   DeleteSoldierByIdController, 
   SoldierByIdController, 
   SoldiersListController 
 } from './soldiers.controller'
+
 import { AuthorizedUserOnly } from '../middleware'
 
 const route = Router()

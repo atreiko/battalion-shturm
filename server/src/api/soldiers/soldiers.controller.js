@@ -16,7 +16,6 @@ import {
 export const SoldiersListController = async (request, response, next) => {
   try {
     const { offset, limit } = request.query
-    console.log(request.query );
     
     const soldiers = await getSoldiers({
       offset,

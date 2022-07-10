@@ -12,11 +12,7 @@ import Exit from '../../assets/exit/Exit'
 const Header = () => {
   const auth = useContext(AuthContext)
   const isAuthrized = !!auth.user
-
-  const signOut = () => {
-    auth.setUser(null)
-    auth.setTokenData(null)
-  }
+  const { signOut } = auth
 
   return (
     <header className={styles.header}>

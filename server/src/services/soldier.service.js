@@ -27,8 +27,6 @@ export const createSoldier = async ({
   })
 }
 
-
-
 /**
  * @desc Search soldier by Id
  **/
