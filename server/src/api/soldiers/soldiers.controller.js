@@ -49,8 +49,7 @@ export const SoldiersListController = async (request, response, next) => {
  * @param {Function} next
  * @return {Promise}
  **/
- export const CreateSoldierController = async (request, response, next) => {
-
+export const CreateSoldierController = async (request, response, next) => {
   try {
     const { title, rank, image, dateOfBirth, description } = request.body
 
@@ -78,8 +77,7 @@ export const SoldiersListController = async (request, response, next) => {
 /**
  * @desc Find soldier by ID
  **/
- export const SoldierByIdController = async (request, response, next) => {
-
+export const SoldierByIdController = async (request, response, next) => {
   try {
     const { soldierId } = request.params
     const soldier = await getSoldierById(soldierId)
@@ -103,7 +101,6 @@ export const SoldiersListController = async (request, response, next) => {
  * @desc Delete soldier by ID
  **/
 export const DeleteSoldierByIdController = async (request, response, next) => {
-
   try {
     const { soldierId } = request.params
     const soldier = await deleteSoldierById(soldierId)

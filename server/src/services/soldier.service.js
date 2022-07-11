@@ -12,7 +12,7 @@ export const getSoldiers = async ({
 })
 
 /**
- * @desc Create product
+ * @desc Create soldier
  * @return {Promise}
  **/
 export const createSoldier = async ({

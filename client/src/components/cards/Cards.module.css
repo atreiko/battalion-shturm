@@ -31,6 +31,19 @@
   transition: .8s;
 }
 
+.rip::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -30px;
+  width: 30px;
+  height: 100px;
+  transform: rotate(-45deg);
+  background-color: #000;  
+  border: 1px solid grey;
+  z-index: 5;
+}
+
 .cardEffect::before {
   top: 0;
   border-radius: 0 0 50% 50%;

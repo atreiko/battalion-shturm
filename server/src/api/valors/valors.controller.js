@@ -102,8 +102,7 @@ import {
 /**
  * @desc Delete valor by ID
  **/
- export const DeleteValorByIdController = async (request, response, next) => {
-
+export const DeleteValorByIdController = async (request, response, next) => {
   try {
     const { valorId } = request.params
     const valor = await deleteValorById(valorId)

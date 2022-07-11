@@ -8,7 +8,7 @@ import { useFetching } from '../../hooks/useFetching'
 const SoldiersPage = () => {
   const [cards, setCards] = useState([])
   const [fetchCards, cardsLoading, cardsError] = useFetching(async () => {
-    const items = await PostService.getSoldiersPosts()
+    const items = await PostService.getSoldierPosts()
     setCards(items.data)
   })
 
@@ -17,7 +17,7 @@ const SoldiersPage = () => {
 
   useEffect(() => {
     fetchCards()
-}, [])
+  }, [])
 
   const lastCardIndex = currentPage * cardsPerPage
   const firstCardIndex = lastCardIndex - cardsPerPage

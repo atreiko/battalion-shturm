@@ -4,7 +4,6 @@ import schema from './schema'
 import { UiButton, UiInput } from '../UI'
 import UserService from '../../services/api/UserService'
 import useAuth from '../../hooks/useAuth'
-import { useFetching } from '../../hooks/useFetching'
 import { useNavigate } from 'react-router-dom'
 
 import styles from './Login.module.css'
@@ -15,7 +14,6 @@ const Login = () => {
   const navigate = useNavigate()
 
   const signIn = async (values) => {
-    console.log(values);
     try {
       setIsLoading(true)
       const { token, user } = await UserService.SignIn(values)

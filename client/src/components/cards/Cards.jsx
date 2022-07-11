@@ -4,13 +4,13 @@ import { UiLoader } from '../UI';
 
 import styles from './Cards.module.css'
 
-const Cards = ({ cards, cardsLoading, cardsError }) => {
+const Cards = ({ cards, cardsLoading, cardsError, rip }) => {
 
   return (
     <ul className={styles.cards}>
       {
         cards.map(({ id, title, image, rank, dateOfBirth, description }) => (
-          <li className={[styles.card, styles.cardEffect].join(' ')} key={id}>
+          <li className={[styles.card, styles.cardEffect, styles[rip]].join(' ')} key={id}>
             <Link className={styles.link} to={`/soldiers/${id}`}>
               <img src={image} alt={title} />
               <div className={styles.info}>

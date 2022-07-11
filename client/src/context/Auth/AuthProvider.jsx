@@ -30,7 +30,6 @@ const AuthProvider = ({ children }) => {
     try {
       if (tokenData) {
         const { data } = await IndexService.getHome()
-        console.log(data)
         setUser(data) 
       }
     } catch {
