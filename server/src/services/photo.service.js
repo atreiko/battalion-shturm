@@ -17,7 +17,7 @@ export const getPhotos = async({
  **/
 
 export const createPhoto = async({
-  title, photo, description
+  title, image, description
 }) => {
   return Photo.create({
     title,

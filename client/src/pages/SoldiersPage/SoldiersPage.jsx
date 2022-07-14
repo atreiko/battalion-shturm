@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import PostService from '../../services/api/PostService'
-import { Container, Title } from '../../components'
-import Cards from '../../components/cards/Cards'
+import { Container, Title, Cards } from '../../components'
 import Pagination from '../../components/pagination/Pagination'
 import { useFetching } from '../../hooks/useFetching'
 
@@ -31,7 +30,12 @@ const SoldiersPage = () => {
     <div className='page'>
       <Container>
         <Title title='Склад морських піхотинців' />
-        <Cards cards={currentCards} cardsLoading={cardsLoading} cardsError={cardsError} />
+        <Cards 
+          path='soldiers'
+          cards={currentCards} 
+          cardsLoading={cardsLoading} 
+          cardsError={cardsError} 
+        />
         <Pagination 
           cardsPerPage={cardsPerPage} 
           totalCards={cards.length}

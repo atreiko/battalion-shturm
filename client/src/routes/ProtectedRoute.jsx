@@ -1,9 +1,14 @@
-import React, { useEffect } from 'react'
-import { Navigate } from 'react-router-dom'
+import React, { useContext, useEffect } from 'react'
+import { Navigate, useLocation } from 'react-router-dom'
+import { AuthContext } from '../context/Auth/AuthContext'
 
-const ProtectedRoute = ({ children, auth }) => {
-  if (auth) {
-    return <Navigate to='/' replace />
+const ProtectedRoute = ({ children }) => {
+  const location = useLocation()
+  const auth = useContext(AuthContext)
+  const isAutorized = !!auth.user
+
+  if (!isAutorized) {
+    return <Navigate to='/' state={{from: location.pathname}} />
   } 
   return children
 }

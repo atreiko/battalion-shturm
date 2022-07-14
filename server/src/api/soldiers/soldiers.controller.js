@@ -90,7 +90,7 @@ export const SoldierByIdController = async (request, response, next) => {
       .status(200)
       .json({
         status: true,
-        soldier: SoldierMapper(soldier)
+        data: SoldierMapper(soldier)
       })
   } catch (error) {
     next(error)

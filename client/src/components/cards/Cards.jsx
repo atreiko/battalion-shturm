@@ -1,27 +1,27 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Card from '../card/Card';
 import { UiLoader } from '../UI';
 
 import styles from './Cards.module.css'
 
-const Cards = ({ cards, cardsLoading, cardsError, rip }) => {
-
+const Cards = ({ path, cards, cardsLoading, cardsError, rip }) => {
+  console.log(path);
   return (
     <ul className={styles.cards}>
       {
-        cards.map(({ id, title, image, rank, dateOfBirth, description }) => (
-          <li className={[styles.card, styles.cardEffect, styles[rip]].join(' ')} key={id}>
-            <Link className={styles.link} to={`/soldiers/${id}`}>
-              <img src={image} alt={title} />
-              <div className={styles.info}>
-                <h4>{title}</h4>
-                <div className={styles.hidden}>
-                  <h6>{rank}</h6>
-                  <span>{dateOfBirth}</span>
-                </div>
-              </div>
-            </Link>
-          </li>
+        cards.map(({ id, title, image, rank, dateOfBirth, description , rip}) => (
+          <Card 
+            key={id}
+            id={id}
+            title={title}
+            image={image}
+            rank={rank}
+            path={path}
+            dateOfBirth={dateOfBirth}
+            description={description}
+            rip={rip}
+          />
         ))
       }
       {cardsLoading && <UiLoader loading={cardsLoading} />}
