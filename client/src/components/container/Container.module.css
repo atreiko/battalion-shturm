@@ -1,9 +1,9 @@
 .container {
   width: var(--container-lg);
-  margin: auto;
+  margin-left: auto;
 }
 
-@media screen and (max-width: 1024px) {
+/* @media screen and (max-width: 1024px) {
   .container {
     width: var(--container-md);
   }
@@ -13,4 +13,4 @@
   .container {
     width: var(--container-sm);
   }
-}
+} */
